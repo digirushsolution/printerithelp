@@ -8,6 +8,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\SettingController;
+// use Illuminate\Support\Facades\Artisan;
+
 
 
 Route::get('/contact', function () {
@@ -34,7 +36,6 @@ Route::get('/installation_printer', [HomeController::class, 'installationprinter
 Route::get('/privacy_policy', [HomeController::class, 'privacypolicypage'])->name('privacy_policy');
 Route::get('/refund_policy', [HomeController::class, 'refundpolicypage'])->name('refund_policy');
 Route::get('/terms_policy', [HomeController::class, 'termspolicypage'])->name('terms_policy');
-
 
 
 Route::delete('/contacts/{id}', [HomeController::class, 'destroy'])->name('contacts.destroy');
@@ -71,6 +72,15 @@ Route::delete('/blog-category/destroy/{id}', [BlogCategoryController::class,'des
 Route::post('/setting/update', [SettingController::class,'update'])->name('setting.update');
 Route::get('/metapage', [SettingController::class, 'metaPage'])->name('metaPage');
 Route::post('ckeditor/upload', [HomeController::class, 'file_upload'])->name('ckeditor.upload');
+
+// For clearing caches etc.
+// Route::get('/clear-cache', function() {
+//     Artisan::call('cache:clear');
+//     Artisan::call('config:clear');
+//     Artisan::call('route:clear');
+//     Artisan::call('view:clear');
+//     return "Caches cleared!";
+// });
 
 
 });

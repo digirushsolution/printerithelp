@@ -6,13 +6,13 @@
                     <div class="d-lg-flex gap-5 mt-4 mt-lg-0">
                         <div class="d-sm-flex gap-5 justify-content-sm-between align-items-sm-start">
                             <div class="d-flex gap-3 align-items-center pe-xl-4 mb-3 mb-sm-0">
-                                <img src="http://localhost/printer_it_help/public/assets/images/png/location-pin.png" alt="location-icon" class="mail_icon">
+                                <img src="{{asset('public/assets/images/png/location-pin.png')}}" alt="location-icon" class="mail_icon">
                                 <div>
                                     <a href="#" class="text-white fs_16 fw-normal link">Lorem, ipsum dolor.</a>
                                 </div>
                             </div>
                             <div class="d-flex gap-3 align-items-center pe-xl-5">
-                                <img src="http://localhost/printer_it_help/public/assets/images/png/email.png" alt="mail-icon" class="mail_icon">
+                                <img src="{{asset('public/assets/images/png/email.png')}}" alt="mail-icon" class="mail_icon">
                                 <div>
                                     <a href="#" class="text-white fs_16 fw-normal link">contactus@gmail.com</a>
                                 </div>
@@ -20,10 +20,10 @@
                         </div>
                     </div>
                     <div class="d-lg-flex gap-3 d-none">
-                        <a href="#"><img src="http://localhost/printer_it_help/public/assets/images/png/instagram-icon.png" alt="social-icon" class="social_icon"></a>
-                        <a href="#"><img src="http://localhost/printer_it_help/public/assets/images/png/facebook-icon.png" alt="social-icon" class="social_icon"></a>
-                        <a href="#"><img src="http://localhost/printer_it_help/public/assets/images/png/whatsapp-icon.png" alt="social-icon" class="social_icon"></a>
-                        <a href="#"><img src="http://localhost/printer_it_help/public/assets/images/png/twitter.png" alt="social-icon" class="social_icon"></a>
+                        <a href="#"><img src="{{asset('public/assets/images/png/instagram-icon.png')}}" alt="social-icon" class="social_icon"></a>
+                        <a href="#"><img src="{{asset('public/assets/images/png/facebook-icon.png')}}" alt="social-icon" class="social_icon"></a>
+                        <a href="#"><img src="{{asset('public/assets/images/png/whatsapp-icon.png')}}" alt="social-icon" class="social_icon"></a>
+                        <a href="#"><img src="{{asset('public/assets/images/png/twitter.png')}}" alt="social-icon" class="social_icon"></a>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
       <div class="container">
         <!-- Logo -->
         <div class="header_logo">
-            <a class="navbar-brand" href="#">
-                <img src="http://localhost/printer_it_help/public/assets/images/png/page-logo.png" alt="page-logo">
+            <a class="navbar-brand" href="https://printerithelp.com/">
+                <img src="{{asset('public/assets/images/png/page-logo.png')}}" alt="page-logo">
             </a>
         </div>
         <!-- Toggle Button -->
@@ -45,10 +45,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="{{route('home')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="{{route('about.show')}}">About</a>
             </li>
             <li class="nav-item dropdown">
                 <!-- <button class="dropbtn"> Services</button>
@@ -59,22 +59,22 @@
                     <a class="dropdown-item" href="#">Canon Printer Support</a>
                     <a class="dropdown-item" href="#">Installation & Troubleshooting</a>
                 </div> -->
-               <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Services
               </a>
               <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li><a class="dropdown-item" href="#">HP Printer Support</a></li>
-                <li><a class="dropdown-item" href="#">Epson Printer Support</a></li>
-                <li><a class="dropdown-item" href="#">Brother Printer Support</a></li>
-                <li><a class="dropdown-item" href="#">Canon Printer Support</a></li>
-                <li><a class="dropdown-item" href="#">Installation & Troubleshooting</a></li>
+                <li><a class="dropdown-item" href="{{route('hp_printer')}}">HP Printer Support</a></li>
+                <li><a class="dropdown-item" href="{{route('epson_printer')}}">Epson Printer Support</a></li>
+                <li><a class="dropdown-item" href="{{route('brother_printer')}}">Brother Printer Support</a></li>
+                <li><a class="dropdown-item" href="{{route('canon_printer')}}">Canon Printer Support</a></li>
+                <li><a class="dropdown-item" href="{{route('installation_printer')}}">Installation & Troubleshooting</a></li>
               </ul> 
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="{{route('contact')}}">Contact</a>
             </li>
           </ul>
         </div>

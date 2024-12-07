@@ -11,14 +11,15 @@ class Contact extends Model
     use SoftDeletes;
 
     use HasFactory;
-
-    protected $fillable = [
-        'first_name',
-        'last_name',
-        'email',
-        'address',
-        'contact',
-        'city',
-        'form_type',
-    ];
+    protected $table = "contacts";
+    protected $guarded = [];
+    // protected $fillable = [
+    //     'first_name',
+    //     'last_name',
+    //     'email',
+    //     'address',
+    //     'contact',
+    //     'city',
+    //     'form_type',
+    // ];
 }

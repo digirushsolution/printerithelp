@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="about_banner py_8" style="background-image: url(public/assets/images/banner_bg_about.jpg);">
+<section class="about_banner py_8" style="background-image: url(public/assets/images/contact_banner1.jpg);">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-7">
@@ -10,18 +10,20 @@
             </div>
             <div class="col-md-5">
                 <div class="form_banner">
-                    <form id="contactForm" class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden" method="POST" action="http://localhost/printer_it_help/submit-contact-form">
-                        <input type="hidden" name="_token" value="syZ6WRdq39wF8lNCr2CjpuZegfSQbQ5R7dKelfdk" autocomplete="off" tabindex="0">                    <input type="hidden" name="form_type" value="home_form" tabindex="0">
+                    <form id="contactForm" class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden" method="POST" action="{{ route('contact.submit') }}">
+                        @csrf
+                        <!-- <input type="hidden" name="_token" value="syZ6WRdq39wF8lNCr2CjpuZegfSQbQ5R7dKelfdk" autocomplete="off" tabindex="0">                     -->
+                        <input type="hidden" name="form_type" value="contact_form" tabindex="0">
                         <div class="corner-animation z-1"></div>
                         <div class="position-relative z-1">
                             <h2 class="fw-semibold text_blue text-center fs_32 mb-4 position-relative z-2">Fill Out This Form for Assistance</h2>
                             
                             <div class="d-md-flex gap-3">
                                 <div class="w-100">
-                                    <input class="w-100 mb-1" type="text" placeholder="Enter your name" name="firstName" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" tabindex="0">
+                                    <input class="w-100 mb-1" type="text" placeholder="Enter your name" name="firstname" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" tabindex="0">
                                                                 </div>
                                 <div class="w-100 mt-2 mt-lg-0">
-                                    <input class="w-100" type="text" placeholder="Enter Last Name" name="lastName" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" tabindex="0">
+                                    <input class="w-100" type="text" placeholder="Enter Last Name" name="lastname" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" tabindex="0">
                                                                 </div>
                             </div>
                     
@@ -60,10 +62,9 @@
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 col-12" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
                 <div class="">
-                    <h2 class="fw-semibold text-black fs_32">Contact Information</h2>
-                    <p class="text-black fs_16 fw-normal mb-2">Lorem ipsum Lorem, ipsum. dolor sit amet Lorem
-                        ipsum dolor sit amet.<span class="d-xl-block">Lorem ipsum dolor
-                            consectetur, sit laudantium, consequatur</span>
+                    <h2 class="fw-semibold text-black fs_32">Contact Us for Expert Printer Support</h2>
+                    <p class="text-black fs_16 fw-normal mb-2">At Printer IT Help, we’re here to provide you with reliable printer support and solutions.
+                    <span class="d-xl-block"> Whether you need printer installation, troubleshooting, or maintenance, our team of experts is ready to assist you.</span>
                     </p>
                     <div class="d-flex align-items-center gap-3">
                         <div class="email_circle d-flex justify-content-center align-items-center">

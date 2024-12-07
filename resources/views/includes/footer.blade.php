@@ -1,19 +1,12 @@
-
-
-
- <footer class="footer_bg_img position-relative py_8 pb-4">
+<footer class="footer_bg_img position-relative py_8 pb-4">
     <div class="footer_bg_layer z-0 pointer_events"></div>
     <div class="container position-relative z-1">
         <div class="row">
             <div class="col-lg-4 col-12">
                 <div class="footer_logo">
-                    <a href="#"><img src="{{ asset('public/assets/images/png/page-logo.png') }}" alt="page-logo"
-                            ></a>
+                    <a href="#"><img src="{{ asset('public/assets/images/png/page-logo.png') }}" alt="page-logo"></a>
                 </div>
-                <p class="text-white fs_16 ">Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit.
-                    Esse,
-                    reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum.</p>
+                <p>Printer IT Help offers expert support for HP, Epson, Brother, and Canon printers. We ensure seamless solutions for home and business users, from setup to troubleshooting and maintenance. Focus on what matters while we handle your printer needs!</p>
                 <div class="d-flex gap-3">
                     <a href="#"><img src="{{ asset('public/assets/images/png/instagram.png') }}" alt="instagram"
                             class="social_icon"></a>
@@ -23,42 +16,25 @@
                             class="social_icon"></a>
                 </div>
             </div>
-            <div class="col-xl-8 col-lg-7 col-12 mt-4 mt-lg-0">
-                <div class="row align-items-center">
+            <div class="col-xl-8 col-lg-7 col-12 mt-4 mt-lg-0 ">
+                <div class="row">
                     <div class="col-lg-4 col-12">
-                        <ul class="p-0 m-0">
+                        <ul class=" services_foot">
                             <li class="text-white fs_18 fw-medium mb-2">Our Services</li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                    HP
-                                    Printer Support Services</a></li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                    HP
-                                    Printer Support Services</a></li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                    HP
-                                    Printer Support Services</a></li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                    HP
-                                    Printer Support Services</a></li>
+                            <li><a href="{{route('hp_printer')}}">HP Printer Support</a></li>
+                            <li><a href="{{route('epson_printer')}}">Epson Printer Support</a></li>
+                            <li><a href="{{route('brother_printer')}}">Brother Printer Support</a></li>
+                            <li><a href="{{route('canon_printer')}}">Canon Printer Support</a></li>
+                            <li><a href="{{route('installation_printer')}}">Installation & Troubleshooting</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-12">
                         <ul class="p-0 m-0">
                             <li class="text-white fs_18 fw-medium mb-2">Our Services</li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                Privacy Policy</a></li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                    Terms & COndition</a></li>
-                            <li><a href="#"
-                                    class="fw-normal text-white mb-2 d-inline-block footer_link position-relative">
-                                   Refund Policy</a></li>
-                           
+                            <li><a href="{{route('privacy_policy')}}">  Privacy Policy</a></li>
+                            <li><a href="{{route('terms_policy')}}">  Terms & COndition</a></li>
+                            <li><a href="{{route('refund_policy')}}">   Refund Policy</a></li>
+                                                     
                         </ul>
                     </div>
                     
@@ -85,7 +61,7 @@
         </div>
     </div>
     <div class="footer_line mt-5 position-relative z-1"></div>
-    <p class="fw-normal text-white text-center fs_16 my-3 opacity-75 position-relative z-1">Lorem
-        ipsum dolor sit, amet
-        consectetur adipisicing.</p>
+    <p class="fw-normal text-white text-center fs_16 my-3 opacity-75 position-relative z-1">© 2024 All Rights Reserved
+
+</p>
 </footer> 

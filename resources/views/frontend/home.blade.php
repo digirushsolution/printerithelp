@@ -6,128 +6,284 @@
         <div class="element element-1">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-7">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
                         <div class="under_banner_content">
                             <span>Printer IT Help</span>
-                            <h1>Expert Printer Service and Repair for Seamless Printing Solutions</h1>
-                            <p>We offer expert printer service and repair to keep your printers running smoothly. Our fast and reliable solutions ensure minimal downtime, allowing your business to maintain efficient and uninterrupted printing.</p>
+                            <h1>Expert Printer Setup and Support Services in the USA</h1>
+                            <p>Printer IT Help offers reliable printer setup and support services for Epson, HP, Canon,
+                                and Brother printer setup and support services. We ensure smooth working performance for
+                                home and business users, from installation to troubleshooting.
+                            </p>
                             <div class="flex_banner_images">
-                                <img src="{{ asset('public/assets/images/printer_google_1.png') }}" alt="warranty" class="support_icon">
-                                <img src="{{ asset('public/assets/images/printer_google_2.png') }}" alt="warranty" class="support_icon">
-                                <img src="{{ asset('public/assets/images/printer_google_3.png') }}" alt="warranty" class="support_icon">
-                                <img src="{{ asset('public/assets/images/printer_google_4.png') }}" alt="warranty" class="support_icon">
+                                <img src="{{ asset('public/assets/images/printer_google_1.png') }}" alt="warranty"
+                                    class="support_icon">
+
+                                    <img src="{{ asset('public/assets/images/google_logo_8.webp') }}" alt="warranty"
+                                class="support_icon">
+                                <img src="{{ asset('public/assets/images/google_logo_9.png') }}" alt="warranty"
+                                class="support_icon">
+
+                                <!-- <img src="{{ asset('public/assets/images/printer_google_2.png') }}" alt="warranty"
+                                    class="support_icon">
+                                <img src="{{ asset('public/assets/images/printer_google_3.png') }}" alt="warranty"
+                                    class="support_icon"> -->
+                                <img src="{{ asset('public/assets/images/printer_google_4.png') }}" alt="warranty"
+                                    class="support_icon">
                             </div>
                             <div class="d-flex justify-content-lg-start justify-content-center gap-2">
-                                <button class="common_btn text-white"><a href="#">Watch Video</a></button>
-                                <button class="book_btn text-white"><a href="#">Book Appointment</a></button>
+                                <!-- <button class="common_btn text-white"><a href="#">Watch Video</a></button> -->
+                                <button class="book_btn text-white" data-bs-toggle="modal" href="#exampleModalToggle">Book
+                                        Appointment</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
                         <div class="form_banner">
-                            <form id="contactForm" class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden" method="POST" action="http://localhost/printer_it_help/submit-contact-form">
-                                <input type="hidden" name="_token" value="syZ6WRdq39wF8lNCr2CjpuZegfSQbQ5R7dKelfdk" autocomplete="off">                    <input type="hidden" name="form_type" value="home_form">
+                            <form id="contactForm"
+                                class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden"
+                                method="POST" action="{{route('contact.submit')}}">
+                                @csrf
+                                <input type="hidden" name="form_type" value="home_form">
                                 <div class="corner-animation z-1"></div>
                                 <div class="position-relative z-1">
-                                    <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Request Your Printing Service Now</h2>
-                                    
-                                    <div class="d-md-flex gap-3">
-                                        <div class="w-100">
-                                            <input class="w-100 mb-1" type="text" placeholder="Enter your name" name="firstName" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                        </div>
-                                        <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Last Name" name="lastName" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                        </div>
+                                        <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Request Your Printing Service Now</h2>
+
+                                        <div class="d-md-flex gap-3">
+                                            <div class="w-100">
+                                                <input class="w-100 mb-1" type="text" placeholder="Name" name="firstname" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                                            </div>
+                                            <div class="w-100 mt-2 mt-lg-0">
+                                                <input class="w-100" type="email" placeholder="Email" name="email" value="">
+                                            </div>
+                                        </div>
+
+                                                <div class="d-md-flex gap-3 mt-3">
+                                                    <div class="w-100 mt-2 mt-lg-0">
+                                                        <input class="w-100" type="text" placeholder="Phone Number" name="contact" minlength="10" maxlength="10" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                                    </div>
+                                                    <div class="w-100 mt-2 mt-lg-0">
+                                                        <input class="w-100" type="text" placeholder="Address" name="address" value="">
+                                                    </div>
+                                                </div>
+
+                                <div class="d-md-flex gap-3 mt-lg-3">
+                                    <div class="w-100 mt-2 mt-lg-0">
+                                        <input class="w-100" type="text" placeholder="State" name="State" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                                     </div>
-                            
-                                    <div class="d-md-flex gap-3 mt-3">
-                                        <div class="w-100">
-                                            <input class="w-100" type="email" placeholder="Enter Your Email" name="email" value="">
-                                                                        </div>
-                                        <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Your Address" name="address" value="">
-                                                                        </div>
+                                    <div class="w-100 mt-2 mt-lg-0">
+                                        <input class="w-100" type="text" placeholder="City" name="city" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                                     </div>
-                            
-                                    <div class="d-md-flex gap-3 mt-lg-3">
-                                        <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Your Number" name="contact" minlength="10" maxlength="10" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                                                                        </div>
-                                        <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Your City" name="city" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                        </div>
-                                    </div>
-                            
-                                    <div class="d-flex justify-content-center mt-2">
-                                        <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
-                                    </div>
-                                </div>
+            </div>
+
+            <div class="d-md-flex gap-3 mt-lg-3">
+                <div class="w-100 mt-2 mt-lg-0">
+                    <!-- Service Dropdown -->
+                    <select class="form-control w-100" name="service" id="serviceSelect" required>
+                        <option value="">Select a Service</option>
+                        <option value="hp">HP Printer Support</option>
+                        <option value="epson">Epson Printer Support</option>
+                        <option value="brother">Brother Printer Support</option>
+                        <option value="canon">Canon Printer Support</option>
+                        <option value="install">Installation & Troubleshooting</option>
+                    </select>
+                </div>
+                <div class="w-100 mt-2 mt-lg-0">
+                    <select class="form-control w-100" name="subservice" id="subServiceSelect" required>
+                        <option value="">Select a Sub-Service</option>
+                        <option value="wireless">Wireless Printer Setup</option>
+                        <option value="network">Network Printer Setup</option>
+                        <option value="multi">Multi-Function Printer Setup</option>
+                    </select>
+                </div>
+            </div>
+
+        
+            <!-- Model Number Input (appears based on the sub-service) -->
+            <div id="modelDiv" class="d-md-flex gap-3 mt-lg-3" >
+                <div class="w-100 mt-2 mt-lg-0">
+                    <input class="w-100" type="text" placeholder="Enter Printer Model No." name="model" id="modelInput" value="">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-2">
+                <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
+            </div>
+        </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="element element-2">    
+        <div class="element element-2">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-7">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
                         <div class="under_banner_content">
                             <span>Printer IT Help</span>
-                            <h2>Expert Printer Troubleshooting for Quick and Reliable Fixes</h2>
-                            <p>At Printer It Help, we specialize in expert printer troubleshooting to quickly identify and resolve issues. Our reliable solutions ensure your printer runs smoothly, minimizing downtime and keeping your business operations efficient</p>
+                            <h2>Reliable Printer Installation and Support Services in the USA</h2>
+                            <p>Printer IT Help provides professional printer installation and support services for
+                                Epson, HP, Canon, and Brother printers, ensuring seamless performance for home and
+                                business users.</p>
                             <div class="flex_banner_images">
-                                <img src="{{ asset('public/assets/images/printer_google_1.png') }}" alt="warranty" class="support_icon">
-                                <img src="{{ asset('public/assets/images/printer_google_2.png') }}" alt="warranty" class="support_icon">
-                                <img src="{{ asset('public/assets/images/printer_google_3.png') }}" alt="warranty" class="support_icon">
-                                <img src="{{ asset('public/assets/images/printer_google_4.png') }}" alt="warranty" class="support_icon">
+                                <img src="{{ asset('public/assets/images/printer_google_1.png') }}" alt="warranty"
+                                    class="support_icon">
+
+                                <img src="{{ asset('public/assets/images/google_logo_8.webp') }}" alt="warranty"
+                                class="support_icon">
+                                <img src="{{ asset('public/assets/images/google_logo_9.png') }}" alt="warranty"
+                                class="support_icon">
+
+                                <!-- <img src="{{ asset('public/assets/images/printer_google_2.png') }}" alt="warranty"
+                                    class="support_icon">
+                                <img src="{{ asset('public/assets/images/printer_google_3.png') }}" alt="warranty"
+                                    class="support_icon"> -->
+                                <img src="{{ asset('public/assets/images/printer_google_4.png') }}" alt="warranty"
+                                    class="support_icon">
                             </div>
                             <div class="d-flex justify-content-lg-start justify-content-center gap-2">
-                                <button class="common_btn text-white">Watch Video</button>
+                                <!-- <button class="common_btn text-white">Watch Video</button> -->
                                 <button class="book_btn text-white">Book Appointment</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
                         <div class="form_banner">
-                            <form id="contactForm" class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden" method="POST" action="http://localhost/printer_it_help/submit-contact-form">
-                                <input type="hidden" name="_token" value="syZ6WRdq39wF8lNCr2CjpuZegfSQbQ5R7dKelfdk" autocomplete="off">                    <input type="hidden" name="form_type" value="home_form">
+                            <!-- // -->
+                            <form id="contactForm"
+      class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden"
+      method="POST" action="{{route('contact.submit')}}">
+    @csrf
+    <input type="hidden" name="form_type" value="home_form">
+    <div class="corner-animation z-1"></div>
+    <div class="position-relative z-1">
+        <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Request Your Printing Service Now</h2>
+
+        <div class="d-md-flex gap-3">
+            <div class="w-100">
+                <input class="w-100 mb-1" type="text" placeholder="Enter Your Name" name="firstname" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="email" placeholder="Enter Your Email" name="email" value="">
+            </div>
+        </div>
+
+        <div class="d-md-flex gap-3 mt-3">
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your Number" name="contact" minlength="10" maxlength="10" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your Address" name="address" value="">
+            </div>
+        </div>
+
+        <div class="d-md-flex gap-3 mt-lg-3">
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your City" name="city" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your Country" name="country" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+            </div>
+        </div>
+
+        <div class="d-md-flex gap-3 mt-lg-3">
+            <div class="w-100 mt-2 mt-lg-0">
+                <!-- Service Dropdown -->
+                <select class="form-control w-100" name="service" id="serviceSelect" required>
+                    <option value="">Select a Service</option>
+                    <option value="hp">HP Printer Support</option>
+                    <option value="epson">Epson Printer Support</option>
+                    <option value="brother">Brother Printer Support</option>
+                    <option value="canon">Canon Printer Support</option>
+                    <option value="install">Installation & Troubleshooting</option>
+                </select>
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <select class="form-control w-100" name="subservice" id="subServiceSelect" required>
+                    <option value="">Select a Sub-Service</option>
+                    <option value="wireless">Wireless Printer Setup</option>
+                    <option value="network">Network Printer Setup</option>
+                    <option value="multi">Multi-Function Printer Setup</option>
+                </select>
+            </div>
+        </div>
+
+      
+        <!-- Model Number Input (appears based on the sub-service) -->
+        <div id="modelDiv" class="d-md-flex gap-3 mt-lg-3" >
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Printer Model No." name="model" id="modelInput" value="">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-2">
+            <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
+        </div>
+    </div>
+</form>
+                             <!-- // -->
+                            <!-- <form id="contactForm"
+                                class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden"
+                                method="POST" action="#">
+                                @csrf
+                                <input type="hidden" name="form_type" value="home_form">
                                 <div class="corner-animation z-1"></div>
                                 <div class="position-relative z-1">
-                                    <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Request Your Printing Service Now</h2>
-                                    
+                                    <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Request
+                                        Your Printing Service Now</h2>
+
                                     <div class="d-md-flex gap-3">
                                         <div class="w-100">
-                                            <input class="w-100 mb-1" type="text" placeholder="Enter your name" name="firstName" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                        </div>
+                                            <input class="w-100 mb-1" type="text" placeholder="Enter Your Name"
+                                                name="firstName" value="" pattern="[A-Za-z\s]+"
+                                                title="Please enter only letters"
+                                                oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                                        </div>
                                         <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Last Name" name="lastName" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                        </div>
+                                            <input class="w-100" type="email" placeholder="Enter Your Email"
+                                                name="email" value="">
+                                        </div>
                                     </div>
-                            
+
                                     <div class="d-md-flex gap-3 mt-3">
-                                        <div class="w-100">
-                                            <input class="w-100" type="email" placeholder="Enter Your Email" name="email" value="">
-                                                                        </div>
                                         <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Your Address" name="address" value="">
-                                                                        </div>
+                                            <input class="w-100" type="text" placeholder="Enter Your Number"
+                                                name="contact" minlength="10" maxlength="10" value=""
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                                        </div>
+                                        <div class="w-100 mt-2 mt-lg-0">
+                                            <input class="w-100" type="text" placeholder="Enter Your Address"
+                                                name="address" value="">
+                                        </div>
                                     </div>
-                            
+
                                     <div class="d-md-flex gap-3 mt-lg-3">
                                         <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Your Number" name="contact" minlength="10" maxlength="10" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                                                                        </div>
+                                            <input class="w-100" type="text" placeholder="Enter Your City" name="city"
+                                                value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                                        </div>
                                         <div class="w-100 mt-2 mt-lg-0">
-                                            <input class="w-100" type="text" placeholder="Enter Your City" name="city" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                        </div>
+                                            <input class="w-100" type="text" placeholder="Enter Your Country"
+                                                name="city" value=""
+                                                oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                                        </div>
                                     </div>
-                            
+
+                                    <div class="d-md-flex gap-3 mt-lg-3">
+                                        <div class="w-100 mt-2 mt-lg-0">
+
+                                            <input class="w-100" type="text" placeholder="Services" name="city" value=""
+                                                oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                                        </div>
+
+                                    </div>
+
                                     <div class="d-flex justify-content-center mt-2">
-                                        <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
+                                        <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry
+                                            Now</button>
                                     </div>
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </div>
@@ -138,73 +294,71 @@
 
 <section id="marquee">
     <div class="container">
-       <div class="pic-container">
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/royalcare-logo.jpg" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/foryou.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/Great-media-1536x733.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/royalcare-logo.jpg" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/foryou.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/Great-media-1536x733.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/royalcare-logo.jpg" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/foryou.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/Great-media-1536x733.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/royalcare-logo.jpg" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/foryou.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/Great-media-1536x733.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/royalcare-logo.jpg" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/foryou.png" alt="">
-          </div>
-          <div class="pic">
-             <img src="https://digirushsolutions.com/public/front_assets/img/Great-media-1536x733.png" alt="">
-          </div>
-       </div>
+        <div class="pic-container">
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_1.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_2.avif')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_5.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_1.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_2.avif')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_5.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_1.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_2.avif')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_5.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_1.png')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_2.avif')}}" alt="">
+            </div>
+            <div class="pic">
+                <img src="{{ asset('public/assets/images/marque_logo_5.png')}}" alt="">
+            </div>
+        </div>
     </div>
- </section>
+</section>
 
 <section class="about_section py_8">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="about_img">
                     <img src="{{ asset('public/assets/images/about.jpg') }}" alt="aboutimg">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right" data-aos-easing="linear"
-                data-aos-duration="600">
-                <h2>About PrinterItHelp: Your Trusted Partner for Reliable Printer Services</h2>
-                <p>At Printer It Help, we are committed to offering superlative service and repair on printers so your equipment can operate efficiently and run smoothly. Our team, comprising printer repair service specialists with many years of experience in the industry, troubleshoots and maintains all type of printers accross the USA. We know how vital it is to have dependable printing for businesses and individuals, so we make a concerted effort to provide solutions quickly to minimize downtime. We can help with anything ranging from repairing a simple problem to even more complex areas of troubleshooting. Our commitment to quality, customer satisfaction and affordable pricing makes us the go to place for all your printer service and repair needs. Trust Printer It Help for all your printing solutions!
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2>Printer IT Help: Trusted Experts for Reliable Printer Support Services</h2>
+                <p>At Printer IT Help, we are your go-to experts for seamless printer setup and support services across
+                    the USA. Whether you need to install an Epson printer, configure a Canon printer, or troubleshoot an
+                    HP printer, we ensure efficient solutions tailored to your specific needs. Our experienced team
+                    specializes in handling significant brands like Epson, HP, Canon, and Brother, providing reliable
+                    Epson printer support and assistance through our HP printer phone support. For quick help, contact
+                    our Brother printer support number for fast, professional service. With a commitment to quality and
+                    customer satisfaction, we simplify complex printer tasks, ensuring optimal performance for both home
+                    and business users. Let Printer IT Help make your printing experience hassle-free and efficient.
                 </p>
                 <div class="about_us_btn">
-                        <div class="d-flex justify-content-lg-start justify-content-center mb-3">
-                            <button class="common_btn text-white"><a href="#">About us</a></button>
-                        </div>
+                    <div class="d-flex justify-content-lg-start justify-content-center mb-3">
+                        <button class="common_btn text-white"><a href="{{route('contact')}}">Contact US
+                            </a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,69 +368,73 @@
 <section class="our_services_sec bg-light py_8">
     <div class="container">
         <div class="heading_our_services">
-            <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">Our <span class="text_blue"> Services</span></h2>
-            <p class=" fw-normal text-black opacity-75 aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">We have comprehensive printer service and repair, ensuring devices run smoothly. Our experts provide fast and reliable solutions through computer printer repair services and maintenance.</span></p>
+            <h2>Our Expert Printer Services: Installation, Support and Troubleshooting</h2>
+            <p>Explore our expert services, including printer installation, troubleshooting, and maintenance for Epson,
+                HP, Canon, and Brother printers. We offer reliable support for home and business users.
+                </span></p>
         </div>
 
         <div class="row justify-content-center pt-lg-4">
-            <div class="col-lg-4 col-sm-6 col-12  mb-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3 ">
                 <div class="service_card">
                     <div class="services_img">
-                        <img src="https://printerithelp.com/public/assets/images/serviceimg.jpg" alt="serviceimg">
+                        <img src="{{ asset('public/assets/images/hp_print_services1.jpg')}}" alt="serviceimg">
                     </div>
-                   <div class="under_txt_services">
-                    <h3>HP Printer Support</h3>
-                    <p>Expert HP printer support for fast, reliable troubleshooting and repair</p>
-                    <button class="common_btn text-white"><a href="#">Explore More</a></button>
-                   </div>
+                    <div class="under_txt_services">
+                        <h3>HP Printer Support</h3>
+                        <p>Get expert assistance with all HP printer setup, troubleshooting & maintenance.</p>
+                        <button class="common_btn text-white"><a href="#">Explore More</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 col-12  mb-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
                 <div class="service_card">
                     <div class="services_img">
-                        <img src="https://printerithelp.com/public/assets/images/serviceimg.jpg" alt="serviceimg">
+                        <img src="{{ asset('public/assets/images/hp_print_services2.jpg')}}" alt="serviceimg">
                     </div>
-                   <div class="under_txt_services">
-                    <h3>EPSON Printer Support</h3>
-                    <p>Reliable EPSON printer support for efficient troubleshooting and quick repairs</p>
-                    <button class="common_btn text-white"><a href="#">Explore More</a></button>
-                   </div>
+                    <div class="under_txt_services">
+                        <h3>Epson Printer Support</h3>
+                        <p>Reliable support for Epson printers, from setup to complex issues.</p>
+                        <button class="common_btn text-white"><a href="#">Explore More</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 col-12  mb-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
                 <div class="service_card">
                     <div class="services_img">
-                        <img src="https://printerithelp.com/public/assets/images/serviceimg.jpg" alt="serviceimg">
+                        <img src="{{ asset('public/assets/images/hp_print_services3.jpg')}}" alt="serviceimg">
                     </div>
-                   <div class="under_txt_services">
-                    <h3>BROTHER Printer Support</h3>
-                    <p>Quick and reliable BROTHER printer support for all your repair needs</p>
-                    <button class="common_btn text-white"><a href="#">Explore More</a></button>
-                   </div>
+                    <div class="under_txt_services">
+                        <h3>BROTHER Printer Support</h3>
+                        <p>Fast and efficient solutions for Brother printer problems and setup.</p>
+                        <button class="common_btn text-white"><a href="#">Explore More</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 col-12  mb-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
                 <div class="service_card">
                     <div class="services_img">
-                        <img src="https://printerithelp.com/public/assets/images/serviceimg.jpg" alt="serviceimg">
+                        <img src="{{ asset('public/assets/images/hp_print_services4.jpg')}}" alt="serviceimg">
                     </div>
-                   <div class="under_txt_services">
-                    <h3>Canon Printer Support</h3>
-                    <p>Expert Canon printer support for fast troubleshooting and reliable repairs</p>
-                    <button class="common_btn text-white"><a href="#">Explore More</a></button>
-                   </div>
+                    <div class="under_txt_services">
+                        <h3>Canon Printer Support</h3>
+                        <p>Professional Canon printer support for smooth installation & fixes.
+                        </p>
+                        <button class="common_btn text-white"><a href="#">Explore More</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 col-12  mb-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
                 <div class="service_card">
                     <div class="services_img">
-                        <img src="https://printerithelp.com/public/assets/images/serviceimg.jpg" alt="serviceimg">
+                        <img src="{{ asset('public/assets/images/hp_print_services5.jpg')}}" alt="serviceimg">
                     </div>
-                   <div class="under_txt_services">
-                    <h3>Installation & Troubleshooting</h3>
-                    <p>Expert installation and troubleshooting services for seamless printer performance</p>
-                    <button class="common_btn text-white"><a href="#">Explore More</a></button>
-                   </div>
+                    <div class="under_txt_services">
+                        <h3>Installation & Troubleshooting</h3>
+                        <p>Complete printer installation and troubleshooting services for all brands.
+                        </p>
+                        <button class="common_btn text-white"><a href="#">Explore More</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,14 +445,24 @@
     <div class="footer_bg_layer"></div>
     <div class="container bg-light box_shadow border_radius_6 position-relative p-sm-4 p-3">
         <div class="row align-items-center">
-            <div class="col-lg-6 col-12 d-flex justify-content-center aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-6 col-12 d-flex justify-content-center aos-init aos-animate" data-aos="fade-right"
+                data-aos-easing="linear" data-aos-duration="600">
                 <div class="overflow-hidden mx-auto">
-                    <img src="http://localhost/printer_it_help/public/assets/images/service-printer.jpg" alt="service" class="about_img border_radius_6 w-100">
+                    <img src="{{asset('public/assets/images/service-printer.jpg')}}" alt="service"
+                        class="about_img border_radius_6 w-100">
                 </div>
             </div>
-            <div class="col-lg-6 col-12 mt-4 mt-lg-0 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
-                <h2 class="text-center text-lg-start fw-semibold text-black mb-3">What Industry Based Technical Support We Offer</h2>
-               <p>We offer industry specific technical support tailored to meet the unique needs of many sectors, including healthcare, education, retail, manufacturing and more. Whether it is optimizing printer fleets for large businesses or offering reliable support for home office setups, we deliver customized solutions that align with your industry's requirements, helping you maintain operational efficiency and reduce costs.</p>              
+            <div class="col-lg-6 col-12 mt-4 mt-lg-0 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear"
+                data-aos-duration="600">
+                <h2 class="text-center text-lg-start fw-semibold text-black mb-3">Industry-Specific Technical Support
+                    for All Your Printer Needs</h2>
+                <p>We have dedicated printer support services tailored for various industries to make printing seamless.
+                    Whether in health, education, or business, our team will expertly assist you in setting up,
+                    configuring, and troubleshooting any printer from top brands such as HP, Epson, Canon, and Brother.
+                    We understand every industry's requirements and can provide reliable solutions for installing the
+                    printer and troubleshooting your printing tasks. After-sales Leave the technical support to us while
+                    you attend to what is essential to you.
+                </p>
             </div>
         </div>
     </div>
@@ -302,201 +470,307 @@
 
 <section class="why_choose_us py_8">
     <div class="container">
-            <div class="heading_why_choose">
-                <h2 class="aos-init aos-animate" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">Why Choose Us for Expert Printer Service and Repair Solutions</h2>
+        <div class="heading_why_choose">
+            <h2>Why Printer IT Help is Your
+                Trusted Choice for Expert Printer Services Expert Technicians
+            </h2>
+            <p>Our certified technicians have extensive experience providing efficient and reliable printer
+                installation, support, and repairs for all major brands, including HP, Epson, Canon, and Brother.
+            </p>
+        </div>
+        <div class="row pt-lg-4">
+            <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                <div class="our_solution_category">
+                    <div class="choose_cards_box">
+                        <div class="choose_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="img_why_choose">
+                                <img src="{{ asset('public/assets/images/Services.png')}}" alt="printing">
+                            </div>
+                            <div class="solu_title">
+                                <h5>Tailored Solutions for Your Needs</h5>
+                            </div>
+                            <div class="solu_description">
+                                <p>Every printer is unique, and so are your needs. Printer IT Help provides customized
+                                    solutions that address specific issues and improve the performance of your printer,
+                                    ensuring you get the most out of your device.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row pt-lg-4">
-                <div class="col-lg-4 col-sm-6 col-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                    <div class="our_solution_category">
-                        <div class="choose_cards_box">
-                            <div class="choose_card">
-                                <div class="hover_color_bubble"></div>
-                             <div class="img_why_choose">
-                                   <img src="https://printerithelp.com/public/assets/images/png/printing.png" alt="printing">
-                             </div>
-                                <div class="solu_title">
-                                    <h5>Experienced Technicians</h5>
-                                </div>
-                                <div class="solu_description">
-                                    <p>Trained and experienced technicians would work on your printer in our team. Specializing in the repair and servicing of printers would ensure that your printer is quickly back to service with permanent fixes.
-                                    </p>
-                                </div>
+            <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                <div class="our_solution_category">
+                    <div class="choose_cards_box">
+                        <div class="choose_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="img_why_choose">
+                                <img src="{{ asset('public/assets/images/Fast Responsive Time.png')}}" alt="printing">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                    <div class="our_solution_category">
-                        <div class="choose_cards_box">
-                            <div class="choose_card">
-                                <div class="hover_color_bubble"></div>
-                             <div class="img_why_choose">
-                                   <img src="https://printerithelp.com/public/assets/images/png/printing.png" alt="printing">
-                             </div>
-                                <div class="solu_title">
-                                    <h5>Quick Response Time</h5>
-                                </div>
-                                <div class="solu_description">
-                                    <p>We know how urgent printer issues are. We will promptly address the issue within minimum downtime, be it for computer printer repair services or for the routine troubleshooting.
-                                    </p>
-                                </div>
+                            <div class="solu_title">
+                                <h5>Fast Response Time</h5>
                             </div>
-                        </div>
+                            <div class="solu_description">
+                                <p>We know how time-sensitive any printer issue may be. Our team's fast responses and
+                                    solutions ensure minimal downtime and seamless operations for our home and business
+                                    users.
 
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                    <div class="our_solution_category">
-                        <div class="choose_cards_box">
-                            <div class="choose_card">
-                                <div class="hover_color_bubble"></div>
-                             <div class="img_why_choose">
-                                   <img src="https://printerithelp.com/public/assets/images/png/printing.png" alt="printing" >
-                             </div>
-                                <div class="solu_title">
-                                    <h5>Comprehensive Printer Services</h5>
-                                </div>
-                                <div class="solu_description">
-                                    <p>From troubleshooting to full printer repair, we will take care of everything you might need to keep your printers in top shape, from the home user to the business one, so you can have a single source for all your needs.
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                    </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-12 mt-sm-4 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
-                    <div class="our_solution_category">
-                        <div class="choose_cards_box">
-                            <div class="choose_card">
-                                <div class="hover_color_bubble"></div>
-                             <div class="img_why_choose">
-                                   <img src="https://printerithelp.com/public/assets/images/png/printing.png" alt="printing">
-                             </div>
-                                <div class="solu_title">
-                                    <h5>Cost-Effective Solutions</h5>
-                                </div>
-                                <div class="solu_description">
-                                    <p>Reliable printer repair services at low priced, value-orientated prices without compromising quality in deliverables.
-                                    </p>
-                                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                <div class="our_solution_category">
+                    <div class="choose_cards_box">
+                        <div class="choose_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="img_why_choose">
+                                <img src="{{ asset('public/assets/images/solution.png')}}" alt="printing">
+                            </div>
+                            <div class="solu_title">
+                                <h5>Comprehensive Services</h5>
+                            </div>
+                            <div class="solu_description">
+                                <p>From printer installation to ongoing troubleshooting and maintenance, we offer a full
+                                    range of services that meet your specific needs, whether at home or in a business
+                                    environment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                <div class="our_solution_category">
+                    <div class="choose_cards_box">
+                        <div class="choose_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="img_why_choose">
+                                <img src="{{ asset('public/assets/images/affordable price.png')}}" alt="printing">
+                            </div>
+                            <div class="solu_title">
+                                <h5>Affordable Pricing</h5>
+                            </div>
+                            <div class="solu_description">
+                                <p>We provide high-quality printer services at competitive prices, ensuring you receive
+                                    the best value for your money without compromising service quality or customer
+                                    satisfaction.
+
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-12 mt-sm-4 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
-                    <div class="our_solution_category">
-                        <div class="choose_cards_box">
-                            <div class="choose_card">
-                                <div class="hover_color_bubble"></div>
-                             <div class="img_why_choose">
-                                   <img src="https://printerithelp.com/public/assets/images/png/printing.png" alt="printing">
-                             </div>
-                                <div class="solu_title">
-                                    <h5>Preventive Maintenance</h5>
-                                </div>
-                                <div class="solu_description">
-                                    <p>We don't just fix problems, we prevent them. Our services for preventive maintenance help spot problems before they are brought to higher levels of damage, elongating the life cycle of your printer and minimizing future repairs.
-                                    </p>
-                                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                <div class="our_solution_category">
+                    <div class="choose_cards_box">
+                        <div class="choose_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="img_why_choose">
+                                <img src="{{ asset('public/assets/images/support.png')}}" alt="printing">
+                            </div>
+                            <div class="solu_title">
+                                <h5>Industry-Specific Support</h5>
+                            </div>
+                            <div class="solu_description">
+                                <p>Whether you are in healthcare, education, or retail, we offer tailored printer
+                                    support services designed to meet your industry's unique requirements for optimal
+                                    performance.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-12 mt-sm-4 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
-                    <div class="our_solution_category">
-                        <div class="choose_cards_box">
-                            <div class="choose_card">
-                                <div class="hover_color_bubble"></div>
-                             <div class="img_why_choose">
-                                   <img src="https://printerithelp.com/public/assets/images/png/printing.png" alt="printing">
-                             </div>
-                                <div class="solu_title">
-                                    <h5>Customer Satisfaction Guarantee</h5>
-                                </div>
-                                <div class="solu_description">
-                                    <p>Your satisfaction is our priority. We guarantee high-quality service and support, ensuring that your printer is running smoothly and efficiently, backed by our commitment to providing excellent customer service.
-                                    </p>
-                                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                <div class="our_solution_category">
+                    <div class="choose_cards_box">
+                        <div class="choose_card">
+                            <div class="hover_color_bubble"></div>
+                            <div class="img_why_choose">
+                                <img src="{{ asset('public/assets/images/custmore Satisfication.png')}}" alt="printing">
+                            </div>
+                            <div class="solu_title">
+                                <h5>Customer Satisfaction</h5>
+                            </div>
+                            <div class="solu_description">
+                                <p>Our primary focus is customer satisfaction. We go the extra mile to ensure every
+                                    service is performed efficiently and provide solutions that keep your printers
+                                    working at peak efficiency.
+                                </p>
                             </div>
                         </div>
-                   </div>
+                    </div>
                 </div>
-           </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="contact_bg_img py_8">
     <div class="contact_bg_layer pointer_events"></div>
-        <div class="container position-relative">
-            <div class="row justify-content-between align-items-center pt-3">
-                <div class="col-lg-6 col-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                    <h2 class="fw-semibold text-white mb-1"> Contact Information
-                    </h2>
-                    <div class="form_line mb-3 mt-1"></div>
-                    <p class="text-white fw-normal mb-3">Lorem ipsum Lorem, ipsum. dolor sit amet Lorem ipsum
-                        dolor sit amet. Lorem ipsum dolor consectetur, sit laudantium, consequatur consectetur adipisicing.Lorem ipsum Lorem, ipsum. dolor sit amet Lorem ipsum dolor sit amet. Lorem ipsum dolor consectetur, sit laudantium, consequatur consectetur adipisicing.Lorem ipsum Lorem, ipsum. dolor sit amet Lorem ipsum
-                        dolor sit amet. Lorem ipsum dolor consectetur, sit laudantium, consequatur consectetur adipisicing.Lorem ipsum Lorem, ipsum. dolor sit amet Lorem ipsum dolor sit amet. Lorem ipsum dolor consectetur, sit laudantium, consequatur consectetur adipisicing.
-                    </p>
-           
-                </div>
-                <div class="col-lg-5 col-12 mt-md-4 mt-3 mt-lg-0 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
-                    <form id="contactForm" class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden" method="POST" action="https://printerithelp.com/submit-contact-form">
-                        <input type="hidden" name="_token" value="2FInLqSQQqJMEpHQRmpDgKBm7IwZMZwIvqbMtrJI" autocomplete="off">                                <input type="hidden" name="form_type" value="home_form">
-                        <div class="corner-animation z-1"></div>
-                        <div class="position-relative z-1">
-                            <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Fill the Form </h2>
-                            
-                            <div class="d-md-flex gap-3">
-                                <div class="w-100">
-                                    <input class="w-100 mb-1" type="text" placeholder="Enter your name" name="firstName" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                            </div>
-                                <div class="w-100 mt-2 mt-lg-0">
-                                    <input class="w-100" type="text" placeholder="Enter Last Name" name="lastName" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                            </div>
-                            </div>
-                    
-                            <div class="d-md-flex gap-3 mt-3">
-                                <div class="w-100">
-                                    <input class="w-100" type="email" placeholder="Enter Your Email" name="email" value="">
-                                                                            </div>
-                                <div class="w-100 mt-2 mt-lg-0">
-                                    <input class="w-100" type="text" placeholder="Enter Your Address" name="address" value="">
-                                                                            </div>
-                            </div>
-                    
-                            <div class="d-md-flex gap-3 mt-lg-3">
-                                <div class="w-100 mt-2 mt-lg-0">
-                                    <input class="w-100" type="text" placeholder="Enter Your Number" name="contact" minlength="10" maxlength="10" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                                                                            </div>
-                                <div class="w-100 mt-2 mt-lg-0">
-                                    <input class="w-100" type="text" placeholder="Enter Your City" name="city" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
-                                                                            </div>
-                            </div>
-                    
-                            <div class="d-flex justify-content-center mt-2">
-                                <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="container position-relative">
+        <div class="row justify-content-between align-items-center pt-3">
+            <div class="col-lg-6 col-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear"
+                data-aos-duration="600">
+                <h2 class="fw-semibold text-white mb-1"> Get in Touch with Printer IT Help: We're Here to Assist You
+                </h2>
+                <div class="form_line mb-3 mt-1"></div>
+                <p class="text-white fw-normal mb-3">At Printer IT Help, we are committed to providing exceptional
+                    customer service and support for all your printer needs. Whether you need assistance with printer
+                    installation, troubleshooting, or ongoing maintenance, our team of experts is here to help. We
+                    understand the importance of having your printers up and running smoothly, so we offer fast,
+                    reliable, and personalized support.
+                </p>
+
+            </div>
+            <div class="col-lg-5 col-12 mt-md-4 mt-3 mt-lg-0 aos-init aos-animate" data-aos="fade-left"
+                data-aos-easing="linear" data-aos-duration="600">
+                <form id="contactForm"
+      class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden"
+      method="POST" action="{{route('contact.submit')}}">
+    @csrf
+    <input type="hidden" name="form_type" value="home_form">
+    <div class="corner-animation z-1"></div>
+    <div class="position-relative z-1">
+        <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Fill The Form</h2>
+
+        <div class="d-md-flex gap-3">
+            <div class="w-100">
+                <input class="w-100 mb-1" type="text" placeholder="Enter Your Name" name="firstname" value="" pattern="[A-Za-z\s]+" title="Please enter only letters" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="email" placeholder="Enter Your Email" name="email" value="">
             </div>
         </div>
+
+        <div class="d-md-flex gap-3 mt-3">
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your Number" name="contact" minlength="10" maxlength="10" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your Address" name="address" value="">
+            </div>
+        </div>
+
+        <div class="d-md-flex gap-3 mt-lg-3">
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your City" name="city" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Your Country" name="country" value="" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+            </div>
+        </div>
+
+        <div class="d-md-flex gap-3 mt-lg-3">
+            <div class="w-100 mt-2 mt-lg-0">
+                <!-- Service Dropdown -->
+                <select class="form-control w-100" name="service" id="serviceSelect" required>
+                    <option value="">Select a Service</option>
+                    <option value="hp">HP Printer Support</option>
+                    <option value="epson">Epson Printer Support</option>
+                    <option value="brother">Brother Printer Support</option>
+                    <option value="canon">Canon Printer Support</option>
+                    <option value="install">Installation & Troubleshooting</option>
+                </select>
+            </div>
+            <div class="w-100 mt-2 mt-lg-0">
+                <select class="form-control w-100" name="subservice" id="subServiceSelect" required>
+                    <option value="">Select a Sub-Service</option>
+                    <option value="wireless">Wireless Printer Setup</option>
+                    <option value="network">Network Printer Setup</option>
+                    <option value="multi">Multi-Function Printer Setup</option>
+                </select>
+            </div>
+        </div>
+
+      
+        <!-- Model Number Input (appears based on the sub-service) -->
+        <div id="modelDiv" class="d-md-flex gap-3 mt-lg-3" >
+            <div class="w-100 mt-2 mt-lg-0">
+                <input class="w-100" type="text" placeholder="Enter Printer Model No." name="model" id="modelInput" value="">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-2">
+            <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
+        </div>
+    </div>
+</form>
+                <!-- <form id="contactForm"
+                    class="bg-light p-xl-5 p-sm-4 px-2 py-3 border_radius_6 position-relative overflow-hidden"
+                    method="POST" action="#">
+                    @csrf
+                    <input type="hidden" name="form_type" value="home_form">
+                    <div class="corner-animation z-1"></div>
+                    <div class="position-relative z-1">
+                        <h2 class="fw-semibold text_blue text-center mb-4 position-relative z-2">Fill the Form </h2>
+
+                        <div class="d-md-flex gap-3">
+                            <div class="w-100">
+                                <input class="w-100 mb-1" type="text" placeholder="Enter your name" name="firstName"
+                                    value="" pattern="[A-Za-z\s]+" title="Please enter only letters"
+                                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                            </div>
+                            <div class="w-100 mt-2 mt-lg-0">
+                                <input class="w-100" type="text" placeholder="Enter Last Name" name="lastName" value=""
+                                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex gap-3 mt-3">
+                            <div class="w-100">
+                                <input class="w-100" type="email" placeholder="Enter Your Email" name="email" value="">
+                            </div>
+                            <div class="w-100 mt-2 mt-lg-0">
+                                <input class="w-100" type="text" placeholder="Enter Your Address" name="address"
+                                    value="">
+                            </div>
+                        </div>
+
+                        <div class="d-md-flex gap-3 mt-lg-3">
+                            <div class="w-100 mt-2 mt-lg-0">
+                                <input class="w-100" type="text" placeholder="Enter Your Number" name="contact"
+                                    minlength="10" maxlength="10" value=""
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            </div>
+                            <div class="w-100 mt-2 mt-lg-0">
+                                <input class="w-100" type="text" placeholder="Enter Your City" name="city" value=""
+                                    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
+                            </div>
+                        </div>
+
+
+
+                        <div class="d-flex justify-content-center mt-2">
+                            <button type="submit" class="common_btn text-white mt-md-3 mt-2">Enquiry Now</button>
+                        </div>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="latest_blog_sec py_8">
     <div class="container">
         <div classs="latest_blog_heading">
-            <h2 class="text-center" data-aos="fade-down"
-                data-aos-easing="linear" data-aos-duration="600"> All Printer Setup - Latest <span
-                    class="text_blue">Blogs</span> Update</h2>
+            <h2 class="text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600"> All Printer
+                Setup - Latest <span class="text_blue">Blogs</span> Update</h2>
         </div>
         <div class="row responsive pt-md-4 pt-1 justify-content-center">
             <div class="col-4 px-md-3 px-sm-2 px-3" data-aos="zoom-in-up" data-aos-easing="linear"
                 data-aos-duration="600">
                 <div class="blogs_card">
                     <div class="overflow-hidden">
-                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg" class="w-100 blog_img">
+                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg"
+                            class="w-100 blog_img">
                     </div>
                     <div class="p-3">
                         <div class="latest_blog_underimg">
@@ -505,9 +779,10 @@
                         </div>
                         <h3 class="text-black mt-3">Lorem ipsum dolor sit amet consectetur</h3>
                         <p class="text-black opacity-75 fw-normal">Lorem, ipsum dolor sit amet consectetur
-                            adipisicing elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum.
+                            adipisicing elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            Lorem, ipsum.
                         </p>
-                        <button class="common_btn text-white">a</button>
+                        <button class="common_btn text-white">Read More</button>
                     </div>
                 </div>
             </div>
@@ -515,7 +790,8 @@
                 data-aos-duration="600">
                 <div class="blogs_card">
                     <div class="overflow-hidden">
-                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg" class="w-100 blog_img">
+                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg"
+                            class="w-100 blog_img">
                     </div>
                     <div class="p-3">
                         <div class="latest_blog_underimg">
@@ -528,7 +804,7 @@
                             Esse,
                             reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum.
                         </p>
-                        <button class="common_btn text-white">a</button>
+                        <button class="common_btn text-white">Read More</button>
                     </div>
                 </div>
             </div>
@@ -536,7 +812,8 @@
                 data-aos-duration="600">
                 <div class="blogs_card">
                     <div class="overflow-hidden">
-                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg" class="w-100 blog_img">
+                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg"
+                            class="w-100 blog_img">
                     </div>
                     <div class="p-3">
                         <div class="latest_blog_underimg">
@@ -544,8 +821,10 @@
                             <a href="#" class="fw-medium text-black">20 Nov 2024</a>
                         </div>
                         <h3 class="text-black mt-3">Lorem ipsum dolor sit amet consectetur</h3>
-                        <p class="text-black fw-normal opacity-75">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum.</p>
-                        <button class="common_btn text-white">a</button>
+                        <p class="text-black fw-normal opacity-75">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem,
+                            ipsum.</p>
+                        <button class="common_btn text-white">Read More</button>
                     </div>
                 </div>
             </div>
@@ -553,7 +832,8 @@
                 data-aos-duration="600">
                 <div class="blogs_card">
                     <div class="overflow-hidden">
-                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg" class="w-100 blog_img">
+                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg"
+                            class="w-100 blog_img">
                     </div>
                     <div class="p-3">
                         <div class="latest_blog_underimg">
@@ -561,8 +841,10 @@
                             <a href="#" class="fw-medium text-black">20 Nov 2024</a>
                         </div>
                         <h3 class="text-black mt-3">Lorem ipsum dolor sit amet consectetur</h3>
-                        <p class="text-black opacity-75 fw-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum.</p>
-                        <button class="common_btn text-white">a</button>
+                        <p class="text-black opacity-75 fw-normal">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem,
+                            ipsum.</p>
+                        <button class="common_btn text-white">Read More</button>
                     </div>
                 </div>
             </div>
@@ -570,7 +852,8 @@
                 data-aos-duration="600">
                 <div class="blogs_card">
                     <div class="overflow-hidden">
-                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg" class="w-100 blog_img">
+                        <img src="{{ asset('public/assets/images/png/blogimg.jpg') }}" alt="blogimg"
+                            class="w-100 blog_img">
                     </div>
                     <div class="p-3">
                         <div class="latest_blog_underimg">
@@ -578,8 +861,10 @@
                             <a href="#" class="fw-medium text-black">20 Nov 2024</a>
                         </div>
                         <h3 class="text-black mt-3">Lorem ipsum dolor sit amet consectetur</h3>
-                        <p class="text-black opacity-75 fw-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum.</p>
-                        <button class="common_btn text-white">a</button>
+                        <p class="text-black opacity-75 fw-normal">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem,
+                            ipsum.</p>
+                        <button class="common_btn text-white">Read More</button>
                     </div>
                 </div>
             </div>
@@ -588,25 +873,24 @@
 </section>
 
 
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
-    
-</script>
-    <script>
-        $(document).ready(function () {
-            $('.slick-slider-banner').slick({
-                fade: true,
-                speed: 1000,
-                autoplay: true,
-                autoplaySpeed: 7000,
-                arrows: false,
-                dots: true,
-            });
-        });
 
-    </script>
 @endsection
-  
 
 
+@section('scripts')
+<script>
+    $(document).ready(function () {
+        $('.slick-slider-banner').slick({
+            fade: true,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            arrows: false,
+            dots: true,
+        });
+    });
+
+</script>
 
 
+@endsection

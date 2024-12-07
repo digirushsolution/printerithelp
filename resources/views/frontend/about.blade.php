@@ -2,7 +2,7 @@
 @section('content')
 
 
-<section class="about_banner py_8" style="background-image: url(public/assets/images/banner_bg_about.jpg);">
+<section class="about_banner py_8" style="background-image: url(public/assets/images/about_banner_page.jpg);">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-7">
@@ -58,22 +58,22 @@
 
 <section class="about_section py_8">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
                 <div class="about_img">
-                    <img src="http://localhost/printer_ithelp_website/public/assets/images/about.jpg" alt="aboutimg">
+                    <img src="{{ asset('public/assets/images/about_bott.jpg')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                <span>About Us</span>
-                <h2>About All Printer Setup</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quasi eius architecto. Corrupti ab a quam omnis porro ea voluptatibus autem eius, iusto consequuntur temporibus, aut enim facere, nisi quod.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quasi eius architecto. Corrupti ab a quam omnis porro ea voluptatibus autem eius, iusto consequuntur temporibus, aut enim facere, nisi quod.
+                <h2>PrinterITHelp: Your Go-To Solution for All Printer Setups</h2>
+                <p>Welcome to PrinterITHelp! We specialize in printer setup and support across the USA, ensuring seamless installation for all operating systems. Our expert team assists with printers, including HP, Epson, Canon, Brother, and more. Whether you need help setting up your HP DeskJet 2700, installing a Canon printer, or troubleshooting a Brother printer, we guide you.
+               At PrinterITHelp, we provide essential resources like HP and Epson printer support numbers, Brother customer support contacts, and detailed installation guides. From installing printers on Mac to downloading printer drivers, we simplify the process to get your printer up and running quickly.
                 </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quasi eius architecto. Corrupti ab a quam omnis porro ea voluptatibus autem eius, iusto consequuntur temporibus, aut enim facere, nisi quod.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quasi eius architecto. Corrupti ab a quam omnis porro ea voluptatibus autem eius, iusto consequuntur temporibus, aut enim facere, nisi quod.
+                <p>Count on PrinterITHelp for reliable, comprehensive support tailored to your printer setup needs!
                 </p>
                 <div class="about_us_btn">
                     <div class="d-flex justify-content-lg-start justify-content-center mb-3">
-                        <button class="common_btn text-white py-2 px-4">Contact us</button>
+                        <button class="common_btn text-white py-2 px-4"><a href="#">Get Support </a></button>
                     </div>
                 </div>
             </div>
@@ -85,11 +85,10 @@
 <section class="our_vision_mision py_8">
     <div class="container">
         <div class="heading_our_vision">
-            <h2>Our Mission, Vision and Values</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi veniam quae accusamus impedit fuga. Quam, non optio reiciendis esse aliquid eaque in ipsam magnam omnis, inventore, hic quis architecto dolorum?</p>
+            <h2>Our Mission, Vision, and Values</h2>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <div class="under_our_mission">
                     <div class="main_flex">
                         <div class="img-vision">
@@ -97,33 +96,35 @@
                         </div>
                         <div class="content">
                             <h3>Mission</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, ad? Lorem, ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deserunt sunt itaque Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reiciendis. Lorem ipsum at molestias vitae sed eaque commodi dignissimos eum.</p>
+                            <p>Simplify printer setup and installation with experienced guidance and support for our customers with leading brands such as HP, Epson, Canon, Brother, and more while providing prompt and efficient solutions to meeting our customers' unique needs so that their printer is always ready to take on its best performance.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <div class="under_our_mission">
                     <div class="main_flex">
                         <div class="img-vision">
                             <img src="{{ asset('public/assets/images/png/mission-icon.png') }}" alt="mission-icon">
                         </div>
                         <div class="content">
-                            <h3>Mission</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, ad? Lorem, ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deserunt sunt itaque Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reiciendis. Lorem ipsum at molestias vitae sed eaque commodi dignissimos eum.</p>
+                            <h3>Vision</h3>
+                            <p>Our vision is to be the most reliable and accessible provider of printer setup and support services across the USA. We aim to ensure businesses and individuals experience seamless, hassle-free printing, empowering them to focus on what truly matters while we handle their printing needs with expertise and care.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <div class="under_our_mission">
                     <div class="main_flex">
                         <div class="img-vision">
                             <img src="{{ asset('public/assets/images/png/values-icon.png') }}" alt="value-icon">
                         </div>
                         <div class="content">
-                            <h3>Mission</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, ad? Lorem, ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deserunt sunt itaque Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reiciendis. Lorem ipsum at molestias vitae sed eaque commodi dignissimos eum.</p>
+                            <h3>Our Core Values</h3>
+                            <p><strong>Customer Focus:</strong> We are customer-centric, giving customers tailored support that matches their unique needs.</p>
+                            <p><strong>Reliability:</strong> Consistency is the keyword; we ensure that your printers are set up correctly and perform optimally.</p>
                         </div>
                     </div>
                 </div>
@@ -140,78 +141,71 @@
         <div class="testimonial_slider">
             <div class="item">
                 <div class="main_content_testimonial">
-                    <h4>Lorem, ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem veritatis quasi adipisci tenetur nobis libero, reprehenderit fugit aperiam repellendus ullam iusto consectetur nesciunt ad alias sint commodi at est.</p>
+                    <p>PrinterITHelp saved my day! Their team quickly resolved my printer issues and walked me through the setup process. Now my printer works flawlessly. Highly recommended!</p>
+                    <h4>John D., California
+                    </h4>
+                    
                 </div>
             </div>
             <div class="item">
                 <div class="main_content_testimonial">
-                    <h4>Lorem, ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem veritatis quasi adipisci tenetur nobis libero, reprehenderit fugit aperiam repellendus ullam iusto consectetur nesciunt ad alias sint commodi at est.</p>
+                <p>I was struggling to install my new Epson printer, but the experts at PrinterITHelp guided me step by step. Their support was prompt and professional. Fantastic service!</p>
+                    <h4>Emily R., New York</h4>
                 </div>
             </div>
             <div class="item">
                 <div class="main_content_testimonial">
-                    <h4>Lorem, ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem veritatis quasi adipisci tenetur nobis libero, reprehenderit fugit aperiam repellendus ullam iusto consectetur nesciunt ad alias sint commodi at est.</p>
+                <p>The PrinterITHelp team set up my office network printer with ease. Their attention to detail and customer focus are unmatched. I’ll definitely use their services again!</p>
+                    <h4>Michael L., Texas </h4>
                 </div>
             </div>
             <div class="item">
                 <div class="main_content_testimonial">
-                    <h4>Lorem, ipsum dolor sit amet</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quidem veritatis quasi adipisci tenetur nobis libero, reprehenderit fugit aperiam repellendus ullam iusto consectetur nesciunt ad alias sint commodi at est.</p>
+                    <p>
+                    Their ongoing maintenance service has consistently kept my printer running smoothly. PrinterITHelp is undoubtedly the best choice for reliable and hassle-free printer support.</p>
+                    <h4>Sarah T., Florida</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="main_section py_8" style="background-image: url(public/assets/images/about_bannner_main.png);">
+<section class="main_section py_8" style="background-image: url(public/assets/images/professional_main.jpg);">
     <div class="container">
         <div class="main_content_under">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus vitae, doloribus ducimus sit recusandae ab aperiam id nulla voluptatem expedita harum? Iusto vitae tenetur quo harum eligendi sunt magni nam?</p>
+            <h2>Get Professional Solutions for All Your Printer Troubles – PrinterITHelp</h2>
+            <p>Struggling with printer issues? PrinterITHelp offers expert solutions for all your printer troubles. From repairs to maintenance, we ensure quick, reliable service for all brands and models. Get hassle-free printing today!</p>
         </div>
     </div>
 </section>
 
 <section class="how_we_work py_8">
     <div class="container">
-        <img src="https://printerithelp.com/public/assets/images/png/arrow-right.png" alt="arrow" class="position-absolute work_arrow1 d-lg-block d-none">
-        <img src="https://printerithelp.com/public/assets/images/png/arrow-right.png" alt="arrow" class="position-absolute work_arrow2 d-lg-block d-none">        
-        <h4 class="text-center text_blue fw-medium fs_18 aos-init aos-animate" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600"> Work Process</h4>
-        <h2 class="fw-semibold fs_32 text-center text-black aos-init aos-animate" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600"> How We Work</h2>
+      <div class="how_heading_work">
+        <h2> Why Choose PrinterITHelp</h2>
+      </div>
         <div class="row mt-5">
-            <div class="col-lg-4 col-12 text-center aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+            <div class="col-lg-4 col-12 text-center mt-3 mt-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                 <div class="main_under_howwork">
-                    <img src="https://printerithelp.com/public/assets/images/png/favicon.png" alt="printer" class="w-100 workprinter_img">
-                <h3 class="text-black fw-medium fs_24 mt-3 text-center">Lorem ipsum dolor</h3>
-                <p class="text-black text-center ">Lorem, ipsum dolor sit amet
-                    consectetur
-                    <span class="d-xl-block">adipisicing elit.
-                        Esse,</span>
-                </p>
+                    <img src="https://printerithelp.com/public/assets/images/png/download-icon.png" alt="printer" class="w-100 workprinter_img">
+                    <h3 class="text-black fw-medium fs_24 mt-3 text-center">Setup & Installation Procedure</h3>
+                    <p class="text-black text-center ">At PrinterITHelp, we offer professional installation procedures for all major brands of printers. We ensure your gadget is configured correctly and working immediately.
+                    </p>
                 </div>
             </div>
             <div class="col-lg-4 col-12 text-center mt-3 mt-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                 <div class="main_under_howwork">
                     <img src="https://printerithelp.com/public/assets/images/png/download-icon.png" alt="printer" class="w-100 workprinter_img">
-                    <h3 class="text-black fw-medium fs_24 mt-3 text-center">Lorem ipsum dolor</h3>
-                    <p class="text-black text-center ">Lorem, ipsum dolor sit amet
-                        consectetur
-                        <span class="d-xl-block">adipisicing elit.
-                            Esse,</span>
+                    <h3 class="text-black fw-medium fs_24 mt-3 text-center">Troubleshooting & Repair</h3>
+                    <p class="text-black text-center ">Having printer issues? Let the team at PrinterITHelp quickly diagnose & repair any issues so you can go back to what really matters.
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-12 text-center mt-3 mt-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                 <div class="main_under_howwork">
                 <img src="https://printerithelp.com/public/assets/images/png/favicon.png" alt="printer" class="w-100 workprinter_img">
-                <h3 class="text-black fw-medium mt-3 text-center">Lorem ipsum dolor</h3>
-                <p class="text-black text-center ">Lorem, ipsum dolor sit amet
-                    consectetur
-                    <span class="d-xl-block">adipisicing elit.
-                        Esse,</span>
+                <h3 class="text-black fw-medium mt-3 text-center">Ongoing Support and Maintenance</h3>
+                <p class="text-black text-center ">With PrinterITHelp, you’ll receive continuous support to keep your printer in optimal condition, minimize downtime, and prevent potential issues before they occur.
                 </p>
                 </div>
             </div>
@@ -219,86 +213,7 @@
     </div>
 </section>
 
-<section class="excellent_providing py_8 pt-0">
-    <div class="container">
-        <h2 class="text-center  mb-2 aos-init aos-animate" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">We are excellent at providing the <span class="text_blue">best
-                products.</span></h2>
-        <div class="row mt-lg-5 mt-4">
-            <div class="col-lg-6 col-12 aos-init aos-animate" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="600">
-                <div class="d-flex gap-3 mb-3">
-                    <img src="https://printerithelp.com/public/assets/images/png/tick-icon.png" alt="tick-icon" class="tick_icon">
-                    <div>
-                        <h3 class="text-black">Lorem ipsum dolor Lorem, ipsum.</h3>
-                        <p> ipsum dolor sit amet
-                            consectetur Lorem, ipsum dolor ipsum.
-                            <span class ="d-xl-block">adipisicing elit.
-                                Esse, </span>
-                        </p>
-                 
-                    </div>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <img src="https://printerithelp.com/public/assets/images/png/tick-icon.png" alt="tick-icon" class="tick_icon">
-                    <div>
-                        <h3 class="text-black">Lorem ipsum dolor Lorem, ipsum.</h3>
-                        <p> ipsum dolor sit amet
-                            consectetur Lorem, ipsum dolor ipsum.
-                            <span class="d-xl-block">adipisicing elit.
-                                Esse,</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <img src="https://printerithelp.com/public/assets/images/png/tick-icon.png" alt="tick-icon" class="tick_icon">
-                    <div>
-                        <h3 class="text-black">Lorem ipsum dolor Lorem, ipsum.</h3>
-                        <p> ipsum dolor sit amet
-                            consectetur Lorem, ipsum dolor ipsum.
-                            <span class="d-xl-block">adipisicing elit.
-                                Esse,</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 aos-init aos-animate" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="600">
-                <div class="d-flex gap-3 mb-3">
-                    <img src="https://printerithelp.com/public/assets/images/png/tick-icon.png" alt="tick-icon" class="tick_icon">
-                    <div>
-                        <h3 class="text-black">Lorem ipsum dolor Lorem, ipsum.</h3>
-                        <p> ipsum dolor sit amet
-                            consectetur Lorem, ipsum dolor ipsum.
-                            <span class="d-xl-block">adipisicing elit.
-                                Esse,</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <img src="https://printerithelp.com/public/assets/images/png/tick-icon.png" alt="tick-icon" class="tick_icon">
-                    <div>
-                        <h3 class="text-black">Lorem ipsum dolor Lorem, ipsum.</h3>
-                        <p> ipsum dolor sit amet
-                            consectetur Lorem, ipsum dolor ipsum.
-                            <span class="d-xl-block">adipisicing elit.
-                                Esse,</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <img src="https://printerithelp.com/public/assets/images/png/tick-icon.png" alt="tick-icon" class="tick_icon">
-                    <div>
-                        <h3 class="text-black">Lorem ipsum dolor Lorem, ipsum.</h3>
-                        <p> ipsum dolor sit amet
-                            consectetur Lorem, ipsum dolor ipsum.
-                            <span class="d-xl-block">adipisicing elit.
-                                Esse,</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
-</section>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
@@ -311,7 +226,24 @@
             slidesToShow: 3,
             arrows: false,
             dots: true,
+            responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
         });
+        
     });
 </script>
 @endsection
